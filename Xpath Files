@@ -1,0 +1,73 @@
+
+Attribute:
+1.//tagName[@attributeName='attributeValue']
+2.//tagName[@attributeName='attributeValue'][@attributeName='attributeValue']
+
+Conditional
+1.//tagName[@attributeName='attributeValue' and @attributeName='attributeValue']
+2.//tagName[@attributeName='attributeValue' or @attributeName='attributeValue']
+
+Xpath Functions
+contains:
+//tagName[@placeholder='Enter firstname & lastname']
+//tagName[contains()]
+//tagName[contains(@placeholder,'Enter first']
+//input[contains9@class,'input ng-pristine') and contains(@palceholder,'name')]
+
+Last:
+(//tagname|any xpath)[last()]
+(//input)[last()-1] e.g[last()-2]
+(//table/tbody/tr/td(1))[last()]
+
+positions:
+(//input)[position()=1] 
+(//input)[position()>5] 
+
+text()
+//a[text()=' Elements]
+
+contains()
+//a[contains(text(),'Elements')]
+
+Contains(.,)
+(//button[contains(.,' Add to Cart')])[1]   //child element to take 
+//span[text()='add to Cart']
+
+
+normalize-space
+//button[normalize-space(text()='Search')]
+
+parent
+//mat-icon[.=delete']/parent::span
+//mat-icon[.='delete']/..
+//mat-icon[.='delete']/ancestor::button
+
+
+//button[@mattooltip='Delete item']/span/mat-icon
+//button[@mattooltip='Delete item']//mat-icon
+
+Child
+//button[@mattooltip='Delete item']/child::span/mat-icon
+//header[@id='global-nav']/child::div/a
+
+ancestor
+//input[@placeholder='Search']/ancestor::div[@class='global-nav_content']/a
+
+Axes
+following::input means down
+//xpath/following::xpath
+//xpath/following-sibling::xpath
+//able[@fro='ap_email']/following-sibling::input[1]
+(//able[@fro='ap_email']/following-sibling::input)[1]
+
+
+preceding
+//xpath/preceding-sibling::xpath
+//xpath/preceding::xpath
+
+//input[@id='ap_eamil']/preceding-sibling::label[1] means upword
+//span[.='Continue']/precesing::button[1]
+
+
+we can wright
+//*[contains(text(),'Verify Your Age')]/following::input[1]
